@@ -36,7 +36,7 @@ The tool prioritizes held-out performance on unseen AI generators and presents t
    ```bash
    pip install fastapi uvicorn python-multipart torch torchvision pillow
    ```
-3. Place your trained model file (`best_model.pt`) in your desired directory and ensure the `MODEL_PATH` variable in `backend.py` points to it.
+3. Place your trained model file (`best_model.pth`) inside the `models/` directory at the root of the project.
 
 ### Starting the Server
 Run the FastAPI backend server using Uvicorn:

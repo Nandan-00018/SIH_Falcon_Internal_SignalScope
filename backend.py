@@ -16,7 +16,7 @@ from torchvision import models, transforms
 # ============================================================
 
 PROJECT_DIR = Path(__file__).resolve().parent
-MODEL_PATH = Path(r"S:\gpu_training\models\best_model.pth")
+MODEL_PATH = PROJECT_DIR / "models" / "best_model.pth"
 STATIC_DIR = PROJECT_DIR / "static"
 
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
