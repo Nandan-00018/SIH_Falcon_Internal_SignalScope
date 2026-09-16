@@ -133,14 +133,16 @@ def startup_event():
     global device, model, classes, transform, model_loaded
 
     print("=" * 60)
-    print("SignalScope API")
-    print("=" * 60)
-
+    print("Loading ResNet18 model from ./models/best_model.pth...")
     device = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu"
     )
 
     print("Device:", device)
+
+    # Use a relative path relative to the backend.py directory
+    BASE_DIR = Path(__file__).resolve().parent
+    weights_path = BASE_DIR / "models" / "best_model.pth"
 
     if device.type == "cuda":
         print(
